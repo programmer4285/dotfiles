@@ -122,3 +122,6 @@ eval "$(/usr/bin/mise activate zsh)"
 
 export PATH=$HOME/.cargo/bin:$PATH
 
+alias dbs="rclone sync ~/ dropbox:/ubuntu -P --exclude-from ~/Documents/rclone/.exclude"
+
+alias fix_audio="sudo alsa force-reload"
