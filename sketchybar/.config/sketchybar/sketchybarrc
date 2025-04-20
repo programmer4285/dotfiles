@@ -24,12 +24,12 @@ default=(
 )
 sketchybar --default "${default[@]}"
 
-# clock
-sketchybar --add item clock right
-sketchybar --set clock \
+# datetime
+sketchybar --add item datetime right
+sketchybar --set datetime \
   update_freq=10 \
-  icon="" \
-  script="$PLUGIN_DIR/clock.sh"
+  icon="󰃰" \
+  script="$PLUGIN_DIR/datetime.sh"
 
 # volume
 sketchybar --add item volume right
@@ -87,16 +87,17 @@ done
 #            --set memory update_freq=5 script="$PLUGIN_DIR/memory.sh"
 
 # spotify
-sketchybar --add item spotify right \
-           --set spotify script="$PLUGIN_DIR/spotify.sh" \
-                         update_freq=5 \
-                         label.max_chars=15 \
-                         scroll_texts=on \
-                         label.align=center \
-                         icon="" \
-                         icon.color=${GREEN} \
-           --subscribe spotify media_change
+# sketchybar --add item spotify right \
+#            --set spotify script="$PLUGIN_DIR/spotify.sh" \
+#                          update_freq=5 \
+#                          label.max_chars=15 \
+#                          scroll_texts=on \
+#                          label.align=center \
+#                          icon="" \
+#                          icon.color=${GREEN} \
+#            --subscribe spotify media_change
 
+sketchybar --hotload true
 
 # Force all scripts to run the first time (never do this in a script)
 sketchybar --update
