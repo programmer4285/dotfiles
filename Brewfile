@@ -1,7 +1,6 @@
 # AeroSpace is an i3-like tiling window manager for macOS
 tap "nikitabobko/tap"
 cask "aerospace"
-
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
 # Load/unload environment variables based on $PWD
@@ -39,5 +38,29 @@ brew "zoxide"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
 # Fish-like autosuggestions for zsh
-brew "install zsh-autosuggestions"
+brew "zsh-autosuggestions"
+# A Zsh theme
+brew "powerlevel10k"
+
+cask "font-fira-mono-nerd-font"
+
+cask "brave-browser"
+cask "obsidian"
+cask "sublime-text"
+cask "discord"
+cask "kitty"
+cask "spotify"
+
+# used by neovim plugins
+brew "fd"
+brew "findutils"
+brew "imagemagick"
+brew "ghostscript"
+brew "tectonic"
+brew "lazygit"
+
+tap "FelixKratz/formulae"
+brew "sketchybar"
+cask "font-hack-nerd-font"
+
 
