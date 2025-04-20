@@ -37,3 +37,5 @@ export EDITOR=nvim
 
 eval "$(/opt/homebrew/bin/mise activate zsh)"
 
+alias ls='ls -alhG'
+
