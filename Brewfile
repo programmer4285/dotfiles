@@ -63,4 +63,6 @@ tap "FelixKratz/formulae"
 brew "sketchybar"
 cask "font-hack-nerd-font"
 
+brew "pre-commit"
+brew "golangci/tap/golangci-lint"
 

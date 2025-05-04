@@ -7,5 +7,12 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("x", "<leader>p", '"_dP')
 
-vim.keymap.set("n", "<A-n>", "<cmd>cnext<CR>")
-vim.keymap.set("n", "<A-p>", "<cmd>cprev<CR>")
+vim.keymap.set("n", "<leader>cn", function()
+  vim.cmd([[normal! viw]])
+  vim.cmd([[s/\([a-z0-9]\)\([A-Z]\)/\1_\l\2/g]])
+end, { desc = "Convert camelCase to snake_case" })
+
+vim.keymap.set("n", "<leader>cN", function()
+  vim.cmd([[normal! viw]])
+  vim.cmd([[s/_\([a-z]\)/\u\1/g]])
+end, { desc = "Convert snake_case to camelCase" })
