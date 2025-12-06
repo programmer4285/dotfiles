@@ -20,6 +20,8 @@ plugins=(
     colored-man-pages
 )
 
+##### sources #####
+
 source $ZSH/oh-my-zsh.sh
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -30,12 +32,31 @@ source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+##### keybinds #####
+
 bindkey "^y" autosuggest-accept
 
-alias n="nvim ."
-export EDITOR=nvim
+
+##### evals #####
 
 eval "$(/opt/homebrew/bin/mise activate zsh)"
+eval "$(zoxide init zsh)"
 
-alias ls='ls -alhG'
 
+##### aliases #####
+
+alias n="nvim ."
+alias cd="z"
+
+# copied from omarchy
+alias ls="eza -lh --group-directories-first --icons=auto"
+alias lsa="ls -a"
+alias lt="eza --tree --level=2 --long --icons --git"
+alias lta="lt -a"
+
+
+##### exports ######
+
+export EDITOR=nvim
+export PATH="$HOME/.local/bin:$PATH"
+export FPATH="$HOME/.zfunc:$FPATH"

@@ -1,8 +1,7 @@
-theme = catppuccin-frappe
-font-size = 18
+theme = Catppuccin Frappe
+font-size = 20
 shell-integration-features = no-cursor
 cursor-style = block
 background-opacity = 0.9
 font-family = FiraMono Nerd Font Mono
-
 macos-titlebar-style = tabs
