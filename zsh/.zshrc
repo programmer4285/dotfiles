@@ -49,9 +49,13 @@ alias lta="lt -a"
 ##### exports ######
 
 export EDITOR=nvim
+
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/dotfiles/scripts:$PATH"
+
 export FPATH="$HOME/.zfunc:$FPATH"
+
 autoload -Uz ytdl
 
 # pnpm

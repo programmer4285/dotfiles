@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -e
+
+# use the current directory name as the session name
+DIR="$PWD"
+SESSION="$(basename "$DIR")"
+
+# kill existing session for this repo, if any
+tmux kill-session -t "=$SESSION" 2>/dev/null || true
+
+# claude window
+tmux new-session -d -s "$SESSION" -n claude -c "$DIR"
+tmux send-keys -t "$SESSION:claude" 'claude' C-m
+
+# neovim window
+tmux new-window -d -t "$SESSION" -n nvim -c "$DIR"
+tmux send-keys -t "$SESSION:nvim" 'nvim' C-m
+
+# window for misc terminal cmds
+tmux new-window -d -t "$SESSION" -n term -c "$DIR"
+
+# open neovim window
+tmux select-window -t "$SESSION:nvim"
+exec tmux attach-session -t "$SESSION"
