@@ -4,6 +4,9 @@ ZSH_THEME="awesomepanda"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# this needs to happen before bindkey calls otherwise tmux doesn't pick up the binds.
+# in general keybinds should be specified after loading plugins.
+source $ZSH/oh-my-zsh.sh
 
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -13,6 +16,9 @@ plugins=(
     colored-man-pages
 )
 
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 ##### USER CONFIGURATION #####
 
 bindkey "^y" autosuggest-accept
@@ -21,11 +27,6 @@ setopt globdots
 
 
 ##### sources #####
-
-source $ZSH/oh-my-zsh.sh
-
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 ##### evals #####
