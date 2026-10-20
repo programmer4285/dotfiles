@@ -18,8 +18,8 @@ plugins=(
 # this line should also occur after plugins=(...)
 source $ZSH/oh-my-zsh.sh
 
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ##### USER CONFIGURATION #####
 
