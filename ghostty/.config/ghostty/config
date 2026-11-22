@@ -7,3 +7,4 @@ font-family = FiraMono Nerd Font Mono
 macos-titlebar-style = tabs
 
 keybind = cmd+shift+t=prompt_tab_title
+keybind = cmd+u=toggle_background_opacity
